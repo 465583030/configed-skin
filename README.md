@@ -20,6 +20,8 @@
 
 如图，也是对应3个section的3个文件。
 
+命名方式是 sectionName-blockName{-status}-cssName
+
 ![](https://upload-images.jianshu.io/upload_images/5077517-b0572b5f12dbb8f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/5077517-bd8b08aeb2610cc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -60,6 +62,7 @@
 
 整体的皮肤架构就分为**皮肤样式**和**皮肤配置**两层，架构图见上文。
 
+[代码链接](https://github.com/lingxiaoguang/configed-skin/tree/master)
 
 
 
