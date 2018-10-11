@@ -1,0 +1,156 @@
+@import '../variables/sections/login.less';
+
+#login {
+  .sideBg(@width, @height, @horizontal, @vertical, @imgPath){
+    display:block;
+    width:@width;
+    height:@height;
+    position:fixed;
+    @{horizontal}:0;
+    @{vertical}:0;
+    background-image:@imgPath;
+  }
+
+  background-color:@login-background-color;
+  &::before {
+    content: ' ';
+    .sideBg(@login-leftTopBackgroundImage-width, @login-leftTopBackgroundImage-height, left, bottom, @login-leftTopBackgroundImage-link);
+  }
+  &::after {
+    content: ' ';
+    .sideBg(@login-leftBottomBackgroundImage-width, @login-leftBottomBackgroundImage-height, right, bottom, @login-leftBottomBackgroundImage-link);
+  }  
+  .el-select {
+    .el-input__suffix{
+      border-left:1px solid @login-selectDropdownButtonSeparateLine-backgroundColor!important;
+    }
+    .el-input {
+      &.el-input--suffix,&.is-focus{
+        
+        .el-input__inner{
+          background: @login-selectDropdownButton-backgroundColor!important;
+          color: @login-selectDropdownButton-fontColor
+        }
+      }
+      .el-select__caret {
+        color: @login-selectDropdownButtonArrow-fontColor!important;
+      }
+    }
+  }
+  
+
+  .el-select-dropdown{
+    .el-scrollbar{
+        .el-select-dropdown__wrap{
+            border-color:@login-selectDropdownDropdown-borderColor!important;
+            background: @login-selectDropdownDropdown-backgroundColor!important;
+            .el-select-dropdown__item{
+                border-bottom: 1px solid @login-selectDropdownDropdownItem-borderColor;
+                background:  @login-selectDropdownDropdownItem-backgroundColor;
+                color: @login-selectDropdownDropdownItem-fontColor;
+                &:hover,&.hover {
+                  background:@login-selectDropdownDropdownItem-hover-backgroundColor !important;
+                  color: @login-selectDropdownDropdownItem-hover-fontColor;
+                  border-color:@login-selectDropdownDropdownItem-hover-borderColor
+                }
+                &:visited {
+                  background: @login-selectDropdownDropdownItem-visited-backgroundColor;
+                }
+                &:active {
+                  background:@login-selectDropdownDropdownItem-active-backgroundColor;
+                }
+                &:link {
+                  background: @login-selectDropdownDropdownItem-link-backgroundColor;
+                }  
+                &.selected {
+                  color: @login-selectDropdownDropdownItem-selected-fontColor;
+                  background: @login-selectDropdownDropdownItem-selected-backgroundColor;
+                  &::after {
+                    background: @login-selectDropdownDropdownItem-selected-imgLink;
+                    background-position:center;
+                    background-repeat: no-repeat;
+                  }
+                }
+            }
+        }
+    }
+  }
+
+  header{
+    &::before{
+      content: ' ';
+      z-index:-1;
+      .sideBg(@login-rightTopBackgroundImage-width, @login-rightTopBackgroundImage-height, left, top, @login-rightTopBackgroundImage-link);
+    }
+    
+    &::after{
+      content: ' ';
+      z-index:-1;
+      .sideBg(@login-rightBottomBackgroundImage-width, @login-rightBottomBackgroundImage-height, right, top, @login-rightBottomBackgroundImage-link);
+    }
+  }
+  .pwInput{
+    background:@login-digitalButton-backgroundColor;
+    border-radius:@login-digitalButon-borderRadius;
+    
+    &:hover{
+      background:@login-digitaoButton-hover-backgroundColor;
+    }
+  }
+  .pwInputed{
+    &.login_password_checked{
+      background-image:@login-digitalScreenDot-selected-link;
+    }
+    &.login_password_unchecked{
+      background-image:@login-digitalScreenDot-link;
+    }
+  }
+
+  #choose_login_style{
+    color:@login-loginTypeTabs-fontColor;
+    font-weight: @login-loginTypeTabs-fontWeight;
+    .prompt{
+      background:@login-loginErrorTipBox-backgroundColor;
+      color:@login-loginErrorTipBox-fontColor;
+    }
+  }
+
+  #choose_login_style .login-disable {
+    color: @login-loginTypeTabs-disabled-fontColor;
+  }
+
+  .pwErr{
+    span{
+      background:@login-loginErrorTipBox-backgroundColor;
+      color:@login-loginErrorTipBox-fontColor;
+    }
+  }
+  & + .shade-component-container{
+    .toast-component-container{
+      background:@login-loginErrorTipBox-backgroundColor;
+    }
+  }
+
+  .version{
+    color:@login-versionNumber-fontColor;
+  }
+  .QR-code_prompt{
+    color: @login-qrcodeTipMessage-fontColor;
+  }
+  .powerOffImg {
+    background-image:@login-logoutButton-backgroundImage;
+    &:hover{
+      background-image:@login-logoutButton-hover-backgroundImage;
+    }
+  }
+  .powerOff  {
+    a{
+      color:@login-logoutButton-fontColor;
+      font-weight:@login-logoutButton-fontWeight;
+      &:hover{
+        color:@login-logoutButton-hover-fontColor;
+      }
+    }
+  }
+  
+}

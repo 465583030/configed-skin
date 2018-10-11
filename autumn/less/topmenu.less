@@ -1,0 +1,64 @@
+@import '../variables/sections/topmenu.less';
+
+.course-header {
+    color: @orange-red;
+    font-weight:@topmenu-fontWeight;
+    background-color:@dark-yellow;
+    .topmenu > li {
+      .submenu{
+          background-color:@topmenu-secondMenu-backgroundColor;
+          position:relative;
+          &::before{
+              content: ' ';
+              display:block;
+              width:@topmenu-secondLevelMenuLeftTopDecorateImage-width;
+              height:@topmenu-secondLevelMenuLeftTopDecorateImage-height;
+              position:absolute;
+              left:@topmenu-secondLevelMenuLeftTopDecorateImage-left;
+              top:@topmenu-secondLevelMenuLeftTopDecorateImage-top;
+              z-index:-1;
+              background:@topmenu-secondLevelMenuLeftTopDecorateImage-link;
+          }
+          &::after{
+              content: ' ';
+              display:block;
+              width:@topmenu-secondLevelMenuRightBottomDecorateImage-width;
+              height:@topmenu-secondLevelMenuRightBottomDecorateImage-height;
+              position:absolute;
+              right:@topmenu-secondLevelMenuRightBottomDecorateImage-right;
+              bottom:@topmenu-secondLevelMenuRightBottomDecorateImage-bottom;
+              z-index:-1;
+              background:@topmenu-secondLevelMenuRightBottomDecorateImage-link;
+          }
+
+      }
+    } 
+    
+    .iconBg(@iconNameArr){
+      .iconClass(@count) {
+          @iconName:extract(@iconNameArr, @count);
+          .icon-@{iconName} {
+              background-image:url('@{iconsDirPath}/@{iconName}.png');
+          }
+      }
+      .loop(@count) when(@count > 0) {
+          .iconClass(@count);
+          .loop(@count - 1);
+      }
+      .loop(length(@iconNameArr));
+    }
+
+    @iconNameArr:liucheng,jiangzhangbang,jiaoxuegongju,lianxi,kezhonghudong,huidaozhuomian,tuichudenglu,kaoqin,xuanzekejian,jilvshu,jishiqi,kejianxinshang,benjiangziliao,jisuanqi,jihehuaban,shebeiguanli,shangjianggonggu,keqiance,kehouce,kezhongfenzu,linshiti,qiangda,fahongbao,dadishu,suijidianming;
+    .iconBg(@iconNameArr);
+  
+    & > ul > li > b {
+      border-left: 1px solid @topmenu-menuItemSeparatorLeftLine-backgroundColor;
+      border-right: 2px solid @topmenu-menuItemSeparatorRightLine-backgroundColor;
+    }
+    .menu-box {
+      background-color: @yellow;
+    }
+    .triangle_border_up {
+      border-color: transparent transparent @yellow;
+    }
+  }

@@ -1,0 +1,67 @@
+@import '../base/colors.less';
+@import '../base/paths.less';
+
+//登录页
+@login-background-color:@yellow;//背景颜色
+//左上角背景图片
+@login-leftTopBackgroundImage-link:url('@{imagesDirPath}/login/loginBg_left_bottom.png');//左上背景图片 链接
+@login-leftTopBackgroundImage-width:431px;//左上背景图片 宽度
+@login-leftTopBackgroundImage-height:280px;//左上背景图片 高度
+//左下角背景图片
+@login-leftBottomBackgroundImage-link:url('@{imagesDirPath}/login/loginBg_right_bottom.png');//左下背景图片 链接
+@login-leftBottomBackgroundImage-width:390px;//左下背景图片 宽度
+@login-leftBottomBackgroundImage-height:243px;//左下背景图片 高度
+//右上角背景图片
+@login-rightTopBackgroundImage-link:url('@{imagesDirPath}/login/loginBg_left_top.png');//右上背景图片 链接
+@login-rightTopBackgroundImage-width:501px;//右上背景图片 宽度
+@login-rightTopBackgroundImage-height:189px;//右上背景图片 高度
+//右下角背景图片
+@login-rightBottomBackgroundImage-link:url('@{imagesDirPath}/login/loginBg_right_top.png');//右下背景图片 链接
+@login-rightBottomBackgroundImage-width:531px;//右下背景图片 宽度
+@login-rightBottomBackgroundImage-height:207px;//右下背景图片 高度
+//按钮式下拉菜单
+@login-selectDropdownButton-backgroundColor:@orange-red;//按钮式下拉菜单 按钮 背景颜色
+@login-selectDropdownButton-fontColor:@white;//按钮式下拉菜单 按钮 字体颜色
+@login-selectDropdownButtonSeparateLine-backgroundColor:fadeout(@dark-orange,50%);//按钮式下拉菜单 按钮分隔线 背景颜色
+@login-selectDropdownButtonArrow-fontColor:fadeout(@white,20%);//按钮式下拉菜单 按钮箭头 字体颜色
+@login-selectDropdownDropdown-borderColor: @orange;//按钮式下拉菜单 下拉菜单 边框颜色
+@login-selectDropdownDropdown-backgroundColor:@light-yellow;//按钮式下拉菜单 背景颜色
+@login-selectDropdownDropdownItem-borderColor:fadeout(@white,70%);//按钮式下拉菜单 菜单项 边框颜色
+@login-selectDropdownDropdownItem-backgroundColor:@light-yellow;//按钮式下拉菜单 菜单项 背景颜色
+@login-selectDropdownDropdownItem-fontColor:@dark-orange-red;//按钮式下拉菜单 菜单项 字体颜色
+@login-selectDropdownDropdownItem-hover-backgroundColor:@orange;//按钮式下拉菜单 菜单项 hover背景颜色
+@login-selectDropdownDropdownItem-hover-fontColor:@white;//按钮式下拉菜单 菜单项 hover字体颜色
+@login-selectDropdownDropdownItem-hover-borderColor:@white;//按钮式下拉菜单 菜单项 hover边框颜色
+@login-selectDropdownDropdownItem-visited-backgroundColor:@light-yellow;//按钮式下拉菜单 菜单项 visited背景颜色
+@login-selectDropdownDropdownItem-active-backgroundColor:@orange;//按钮式下拉菜单 菜单项 active背景颜色
+@login-selectDropdownDropdownItem-link-backgroundColor: @light-yellow;//按钮式下拉菜单 菜单项 link背景颜色
+@login-selectDropdownDropdownItem-selected-backgroundColor:@orange;//按钮式下拉菜单 菜单项 selected 背景颜色
+@login-selectDropdownDropdownItem-selected-fontColor:@white;//按钮式下拉菜单 菜单项 selected 字体颜色
+@login-selectDropdownDropdownItem-selected-imgLink:url('@{imagesDirPath}/login/item_seletcted.png');//按钮式下拉菜单 菜单项 selected 图片路径
+
+//数字按键
+@login-digitalButton-backgroundColor:fadeout(@orange-red,70%);//数字按键 背景颜色
+@login-digitaoButton-hover-backgroundColor:fadeout(@orange-red,10%);//数字按键hover 背景颜色
+@login-digitalButon-borderRadius:30px;//数字按键 圆角大小
+//数字显示区的点
+@login-digitalScreenDot-link:url('@{imagesDirPath}/login/radio_off.png');//数字显示区的点 未选中图片
+@login-digitalScreenDot-selected-link:url('@{imagesDirPath}/login/radio_on.png');//数字显示区的点  选中图片
+//登录方式选项卡
+@login-loginTypeTabs-fontColor:@orange-red;//登录方式选项卡  字体颜色
+@login-loginTypeTabs-fontWeight:bold;//登录方式选项卡  字体粗细
+@login-loginTypeTabs-disabled-fontColor:fadeout(@orange-red,50%);//登录方式选项卡 不可用状态  字体颜色
+
+//登录错误信息提示框
+@login-loginErrorTipBox-backgroundColor:@orange-red;//登录错误信息提示框 背景颜色
+@login-loginErrorTipBox-fontColor:@white;//登录错误信息提示框 字体颜色
+
+//版本号
+@login-versionNumber-fontColor:@dark-red;//版本号  字体颜色
+//二维码提示信息
+@login-qrcodeTipMessage-fontColor:@orange-red;//二维码提示信息 字体颜色
+//退出按钮
+@login-logoutButton-backgroundImage:url('@{imagesDirPath}/login/icon_signin_close.png');//退出按钮图标  背景图片
+@login-logoutButton-hover-backgroundImage:url('@{imagesDirPath}/login/icon_signin_close_pressed.png');//退出按钮图标hover 背景图片
+@login-logoutButton-fontColor:@dark-red;//退出按钮  字体颜色
+@login-logoutButton-fontWeight:bold;//退出按钮  字体粗细
+@login-logoutButton-hover-fontColor:@orange-red;//退出按钮hover 字体颜色

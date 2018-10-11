@@ -1,0 +1,105 @@
+@import '../variables/sections/attendance.less';
+
+.attendance-wrap{
+    background:@attendance-background;
+
+    &::before{
+        content:' ';
+        display:block;
+        width:@attendance-leftTopBackgroundImage-width;
+        height:@attendance-leftTopBackgroundImage-height;
+        position:fixed;
+        left:0;
+        top:0;
+        background-image:@attendance-leftTopBackgroundImage-link;
+    }
+    .attendance-container{
+        header{
+            border-bottom: 1px solid @attendance-separateLine-backgroundColor;
+            .lesson-group{
+                color:@attendance-courseInfo-fontColor;
+            }
+            .teacher-name{
+                color:@attendance-teacherName-fontColor;
+                position:relative;
+                &::before{
+                    content:' ';
+                    display:block;
+                    width:@attendance-teacherNameDecorateImage-width;
+                    height:@attendance-teacherNameDecorateImage-height;
+                    position:absolute;
+                    left:@attendance-teacherNameDecorateImage-left;
+                    top:@attendance-teacherNameDecorateImage-top;
+                    background-image:@attendance-teacherNameDecorateImage-link;
+                }
+            }
+            .logout{
+                background:@attendance-logoutButton-backgroundColor;
+                color:@attendance-logoutButton-fontColor;
+                border-radius:@attendance-logoutButton-borderRadius;
+            }
+        }
+        .student-secction{
+            border-bottom: 1px solid @attendance-separateLine-backgroundColor;
+            &::-webkit-scrollbar{
+                background:@attendance-studentListScrollBar-backgroundColor;
+            }
+            &::-webkit-scrollbar-thumb {
+                background:@attendance-studentListScrollBarThumb-backgroundColor;
+            }
+        }
+        .student-group {
+            .student-item {
+                background: @attendance-studentListItem-backgroundColor;
+                border:1px solid @attendance-studentListItem-borderColor;
+                border-top-left-radius:@attendance-studentListItem-leftTopBorderRadius;
+                border-bottom-left-radius:@attendance-studentListItem-leftBottomBorderRadius;
+                border-top-right-radius: @attendance-studentListItem-rightTopBorderRadius;
+                border-bottom-right-radius:@attendance-studentListItem-rightBottomBorderRadius;
+                &.unselected {
+                    background: @attendance-studentListItem-selected-backgroundColor;
+                    border-top-left-radius:@attendance-studentListItem-selected-leftTopBorderRadius;
+                    border-bottom-left-radius:@attendance-studentListItem-selected-leftBottomBorderRadius;
+                    border-top-right-radius: @attendance-studentListItem-selected-rightTopBorderRadius;
+                    border-bottom-right-radius:@attendance-studentListItem-selected-rightBottomBorderRadius;
+                }
+                .attendance-type {
+                    color: @attendance-studentListItemAttendanceType-fontColor;
+                    font-size:@attendance-studentListItemAttendanceType-fontSize;
+                }
+                .student-name {
+                    color: @attendance-studentListItemStudentName-fontColor;
+                    font-size: @attendance-studentListItemStudentName-fontSize;
+                }
+                .icon-binded {
+                    background: @attendance-studentListItemDeviceBound-link;
+                    width:@attendance-studentListItemDeviceBound-width;
+                    height:@attendance-studentListItemDeviceBound-height;
+                }
+                .icon-checked {
+                    background:@attendancce-studentListItemSelectedIcon-link;
+                    width:@attendancce-studentListItemSelectedIcon-width;
+                    height:@attendancce-studentListItemSelectedIcon-height;
+                }
+            }
+        }
+        .btn-confirm{
+            background:@attendance-attendanceConfirmButton-background;
+            color:@attendance-attendanceConfirmButton-fontColor;
+        }
+    }
+    & + .shade-component-container{
+        .toast-component-container{
+            background:@attendance-errorTipBox-backgroundColor;
+        }
+    }
+    .modal-component-container{
+        background:@attendance-modal-backgroundColor;
+        .modal-footer{
+            border-top: 1px solid @attendance-modal-borderColor;
+        }
+        .modal-footer .btn.confirm{
+            border-right: 1px solid @attendance-modal-borderColor;
+        }
+    }
+}
